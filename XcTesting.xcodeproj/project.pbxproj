@@ -12,8 +12,8 @@
 		94DAE6481F5540D400827B9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94DAE6461F5540D400827B9F /* Main.storyboard */; };
 		94DAE64A1F5540D400827B9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94DAE6491F5540D400827B9F /* Assets.xcassets */; };
 		94DAE64D1F5540D400827B9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94DAE64B1F5540D400827B9F /* LaunchScreen.storyboard */; };
-		94DAE6581F5540D400827B9F /* XcTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DAE6571F5540D400827B9F /* XcTestingTests.swift */; };
 		94DAE6631F5540D400827B9F /* XcTestingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DAE6621F5540D400827B9F /* XcTestingUITests.swift */; };
+		94DAE6721F5545F200827B9F /* EvenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DAE6711F5545F200827B9F /* EvenTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +42,11 @@
 		94DAE64C1F5540D400827B9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94DAE64E1F5540D400827B9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94DAE6531F5540D400827B9F /* XcTestingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XcTestingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		94DAE6571F5540D400827B9F /* XcTestingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcTestingTests.swift; sourceTree = "<group>"; };
 		94DAE6591F5540D400827B9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94DAE65E1F5540D400827B9F /* XcTestingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XcTestingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94DAE6621F5540D400827B9F /* XcTestingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcTestingUITests.swift; sourceTree = "<group>"; };
 		94DAE6641F5540D500827B9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94DAE6711F5545F200827B9F /* EvenTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvenTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +110,8 @@
 		94DAE6561F5540D400827B9F /* XcTestingTests */ = {
 			isa = PBXGroup;
 			children = (
-				94DAE6571F5540D400827B9F /* XcTestingTests.swift */,
 				94DAE6591F5540D400827B9F /* Info.plist */,
+				94DAE6711F5545F200827B9F /* EvenTest.swift */,
 			);
 			path = XcTestingTests;
 			sourceTree = "<group>";
@@ -197,6 +197,7 @@
 					};
 					94DAE6521F5540D400827B9F = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 94DAE63E1F5540D400827B9F;
 					};
@@ -268,7 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94DAE6581F5540D400827B9F /* XcTestingTests.swift in Sources */,
+				94DAE6721F5545F200827B9F /* EvenTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,10 +440,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = XcTestingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nikpra.DailyRentals.XcTestingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "XcTestingTests/XcTestingTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XcTesting.app/XcTesting";
 			};
@@ -453,10 +457,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = XcTestingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nikpra.DailyRentals.XcTestingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "XcTestingTests/XcTestingTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XcTesting.app/XcTesting";
 			};

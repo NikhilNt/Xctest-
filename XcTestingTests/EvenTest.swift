@@ -1,6 +1,6 @@
 //
-//  XcTestingTests.swift
-//  XcTestingTests
+//  EvenTest.swift
+//  XcTesting
 //
 //  Created by Nikhil Tanappagol on 8/28/17.
 //  Copyright © 2017 Nikhil Tanappagol. All rights reserved.
@@ -8,8 +8,9 @@
 
 import XCTest
 @testable import XcTesting
+let view = ViewController()
 
-class XcTestingTests: XCTestCase {
+class EvenTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -33,10 +34,16 @@ class XcTestingTests: XCTestCase {
         }
     }
     
-    func testIsEvenNumber (){
-        let vc = ViewController()
-        let odd = 6
-        XCTAssertFalse(vc.isNumberEven(num : odd))
+    func testistheNumberEven () {
+        
+        let x = 9
+        XCTAssertFalse(view.isNumberEven(num: x))
+    }
+    
+    func testSumEvenValueNumberFibon() {
+        let limit  = 4000000
+        let answer = 4613732
+        XCTAssertEqual(view., <#T##expression2: [Equatable]##[Equatable]#>)
     }
     
 }
